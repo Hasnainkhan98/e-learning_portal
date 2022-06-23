@@ -1,0 +1,26 @@
+ create a virtual environment 
+- install django
+- django-admin startproject <project name>
+- django admin startapp <app name>
+- 	add the app to settings.py in installed apps
+- 	add views in app from views.py
+- 	map this view to urls.py (using url mapping or include function)
+- add templates
+- 	add templates folder and add subdirectories of each app  
+- 	change the directory to get these templates in project settings (DIR): 
+	adding the templates dir to the django project to fetch html files: TEMPLATE_DIR 
+- 	adding this in templateslist in settings.py 
+- 	create html file inside the templates directory and put html code
+- Edit views.py to take the template
+- make all the models 
+- 	python manage.py migrate
+- 	register the changes in model: python manage.py makemigrations <app name>
+- 	python manage.py migrate
+- 	register your models in admin.py file of that application
+- 	create superuser to get access to admin interface
+- create a forms.py to use the models in front end for users (django-crispy-forms for bootstrap support)
+- create templates for registration, login, base, index html files in respective subdirectory of templates folder
+	create a base.html and use template tagging to extend this on all other pages
+- a to and forth between forms, html and views files to setup what we want. 
+
+PYHTON MANAGE.PY RUNSERVER	
