@@ -43,6 +43,8 @@ INSTALLED_APPS = [
     'app_users.apps.AppUsersConfig',
     'curriculum',
     'crispy_forms',
+    'rest_framework',
+    'knox',
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
@@ -137,3 +139,11 @@ LOGIN_URL = '/app_users/user_login'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        # 'rest_framework.authentication.BasicAuthentication',
+        # 'rest_framework.authentication.SessionAuthentication',
+        'knox.auth.TokenAuthentication',
+    ]
+}
